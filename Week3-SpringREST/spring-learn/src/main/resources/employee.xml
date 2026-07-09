@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Hands on 3 (Spring REST session): Static employee list data via Spring XML config -->
+
+    <bean id="dept1" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="1" />
+        <property name="name" value="Engineering" />
+    </bean>
+
+    <bean id="dept2" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="2" />
+        <property name="name" value="Human Resources" />
+    </bean>
+
+    <bean id="emp1" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="101" />
+        <property name="name" value="Asha Verma" />
+        <property name="skill" value="Java" />
+        <property name="department" ref="dept1" />
+    </bean>
+
+    <bean id="emp2" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="102" />
+        <property name="name" value="Rohit Sharma" />
+        <property name="skill" value="Spring Boot" />
+        <property name="department" ref="dept1" />
+    </bean>
+
+    <bean id="emp3" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="103" />
+        <property name="name" value="Priya Nair" />
+        <property name="skill" value="Java" />
+        <property name="department" ref="dept2" />
+    </bean>
+
+    <bean id="emp4" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="104" />
+        <property name="name" value="Karan Mehta" />
+        <property name="skill" value="Spring Boot" />
+        <property name="department" ref="dept2" />
+    </bean>
+
+    <util:list id="employeeList" list-class="java.util.ArrayList" value-type="com.cognizant.springlearn.model.Employee">
+        <ref bean="emp1" />
+        <ref bean="emp2" />
+        <ref bean="emp3" />
+        <ref bean="emp4" />
+    </util:list>
+
+    <util:list id="departmentList" list-class="java.util.ArrayList" value-type="com.cognizant.springlearn.model.Department">
+        <ref bean="dept1" />
+        <ref bean="dept2" />
+    </util:list>
+
+</beans>
