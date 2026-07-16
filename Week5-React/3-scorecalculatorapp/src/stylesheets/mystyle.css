@@ -1,0 +1,61 @@
+.score-card {
+  max-width: 450px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.score-header {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.score-body {
+  padding: 25px;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.score-body p {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #f3f4f6;
+  padding-bottom: 8px;
+}
+
+.score-body p:last-child {
+  border-bottom: none;
+}
+
+.average-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-pass {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-fail {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
